@@ -1,0 +1,151 @@
+<style type="text/css">
+    p span {
+    display:block;
+    }
+    .profile-details{
+        margin: 0px;
+    }
+    .profile-details>.item-image{
+        background-color: black;
+    }
+    .profile-details>.item-image>img{
+        opacity: 0.7;
+    }
+    .profile-details>.item-avatar{
+        position: absolute;
+        z-index: 3;
+        top: 50px;
+        width: 100%;
+        background-color:initial;
+        border:none;
+    }
+    .profile-details>.item-button{
+        padding: 5px;
+    }
+
+    .profile-details>.item-icon-left>.icon{
+
+        font-size: 16px;
+    }
+    .profile-details>.item>p {
+        font-size: 12px;
+        overflow: auto;
+        text-overflow: initial;
+        white-space: normal;
+    }
+    .dateSelect{
+        padding: 0px;
+    }
+    .badge {
+        min-width: 60px;
+        line-height: 55px;
+        border-radius: 40px;
+    }
+
+    .item .badge {
+        right:inherit;
+    }
+    .time-slot{
+        padding: 20px;
+        background-color: #969494;
+        border-radius: 66px;
+        margin: 10px;
+
+    }
+    .scroll-bar-h {
+        height: 0px;
+    }
+    .scrollContent>.scroll{
+
+        width:125%;
+    }
+    .slot-list{
+
+        margin: 0px 7px;
+    }
+    .selectTime{
+        background: #aaaaaa;
+    }
+    .notAvailability{
+
+        background: red;
+    }
+    .apptfixbtn
+    {
+        font-size: 17px;
+        font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+    }
+</style>
+
+<ion-view view-title="Appointment Fixing" style="color:white;">
+    <ion-nav-bar ng-controller="AppointmentsFixingCtrl">
+        <ion-nav-back-button class="button-clear">
+            <i class="icon ion-android-arrow-back" style="color:white;"></i>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="secondary">
+            <button class="button button-icon button-clear padding-right" ng-click="popover.show($event)" go-native>
+                <i style="font-size: x-large; margin-right: 20px;color:#fff;" ng-class="{'ion-android-more-vertical': platform.isAndroid(), 'ion-ios-cog-outline':platform.isIOS()}" class="padding-right"></i>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-content ng-class="{'has-tabs-top': platform.isAndroid()}" class="has-header">
+
+        <div class="animate-repeat">
+            <!-- -->
+            <div class="list card profile-details">
+
+                <div class="list-card">
+                    <div class="item item-divider item-icon-left" style="padding-left: 43px;">
+                    <i class="icon ion-ios-person" style="font-size: 24px;"></i>
+                    <p>SELECTED DOCTOR</p>
+                    </div>
+                    <h5 style="text-align: center;margin-top: 5%;margin-bottom: 5%;">Dr. {{doctorProfileDtl.name}}</h5>
+                    <div class="item item-divider item-icon-left" style="padding-left: 43px;">
+                        <i class="icon ion-ios-flask-outline" style="font-size: 24px;"></i>
+                        <p>DEPARTMENT</p>
+                    </div>
+                    <h5 style="text-align: center;margin-top: 5%;margin-bottom: 5%;">{{doctorProfileDtl.speciality}}</h5>
+                    <div class="item item-divider item-icon-left" style="padding-left: 43px;">
+                        <i class="icon ion-calendar" style="font-size: 19px;"></i>
+                        <p>PICK A DATE</p>
+                    </div>
+                    <div>
+                        <label class="item item-input">
+                            <span style="margin:0 auto;">
+                            <ionic-datepicker input-obj="datepickerObjecttodate">
+                                <input type="text" style="padding-right: 8px;background-color:#ffffff;float: left;width: 70%;text-align: center;" placeholder="Select Date"  ng-readonly="true" id="tdate" name="tdate" ng-model="ToDate"/>
+                            </ionic-datepicker>
+                            <i class="ion-android-calendar"  style="font-size: 25px;"></i>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="item item-divider item-icon-left" style="padding-left: 43px;">
+                        <i class="icon ion-clock" style="font-size: 19px;"></i>
+                        <p>PICK A TIME</p>
+                    </div>
+                    <div>
+                        <label class="item item-input">
+                            <span style="margin:0 auto;">
+                            <ionic-timepicker input-obj="myfromtimePickerObject">
+                                <input type="text" placeholder="Select Time"  style="padding-right: 8px;background-color:#ffffff;float: left;width: 70%;text-align: center;" ng-model="FromTime" name="FromTime" ng-readonly="true"  />
+                            </ionic-timepicker>
+                            <i class="ion-clock"  style="font-size: 25px;"></i>
+                                </span>
+                        </label>
+                    </div>
+                </div>
+                <br/>
+                <div class="item item-button" style="border-top: 0 none;">
+                    <button ng-disabled="!(!!ToDate && !!FromTime)" class="button button-full button-positive apptfixbtn"   ng-click="checkdt()">
+                        Book Appointment
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </ion-content>
+
+</ion-view>
+

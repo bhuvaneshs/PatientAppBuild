@@ -1,0 +1,135 @@
+
+<ion-view cache-view="true" view-title="Doctor Search">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon button-clear padding-right" ng-click="popover.show($event)" go-native>
+            <i style="font-size: x-large; margin-right: 20px;" ng-class="{'ion-android-more-vertical': platform.isAndroid(), 'ion-ios-cog-outline':platform.isIOS()}" class="padding-right"></i>
+        </button>
+    </ion-nav-buttons>
+   <ion-content ng-class="{'has-tabs-top': platform.isAndroid()}" class="has-header">
+<ion-list>
+<div class="row">
+<div class="col col-25 icontxt"><img ng-src="templates/res/Anasthesia.png"
+style="width: 100%" ng-click="searchData.speciality = 'Anaesthesiology'; openSearch(); onsearchkeys();">
+<small style="font-size: x-small">Anaesthesiology</small>
+</div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/bariatric.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Bariatric and Metabolic Surgery'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Bariatric Surgery</small>
+            </div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/cardiologist.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Cardiology'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Cardiology</small>
+            </div>
+
+            <div class="col col-25 icontxt"><img ng-src="templates/res/dentist.png" style="width: 100%" ng-click="searchData.speciality = 'Dentistry'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Dentistry</small>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col col-25 icontxt"><img ng-src="templates/res/dermotology.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Dermatology'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Dermatology</small>
+            </div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/emergency.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Emergency and Trauma Services'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Emergency</small>
+            </div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/endocrinology.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Endocrinology'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Endocrinology</small>
+            </div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/ent.png" style="width: 100%" ng-click="searchData.speciality = 'ENT'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">ENT</small>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col col-25 icontxt"><img ng-src="templates/res/gastrologist.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Gastroenterology (Medical)'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Gastroenterology</small>
+            </div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/gensurgery.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'General Laparoscopic Surgery'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">General Surgery</small>
+            </div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/intmedicine.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Internal Medicine'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Internal Medicine</small>
+            </div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/nephrology.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Nephrology'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Nephrology</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-25 icontxt"><img ng-src="templates/res/neurologist.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Neurology'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Neurology</small>
+            </div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/neurosurgery.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Neurosurgery'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Neurosurgery</small>
+            </div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/oncology.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'oncology'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Oncology</small>
+            </div>
+            <div class="col col-25 icontxt"><img ng-src="templates/res/orthopedic.png"
+                                                                    style="width: 100%" ng-click="searchData.speciality = 'Orthopedics'; openSearch(); onsearchkeys();">
+                <small style="font-size: x-small">Orthopedics</small>
+            </div>
+        </div>
+<div class="row">
+    <div class="col col-25 icontxt"><img ng-src="templates/res/painmanagement.png"
+                                         style="width: 100%" ng-click="searchData.speciality = 'Pain Medicine'; openSearch(); onsearchkeys();">
+        <small style="font-size: x-small">Pain Medicine</small>
+    </div>
+    <div class="col col-25 icontxt"><img ng-src="templates/res/pediatric.png"
+                                                            style="width: 100%" ng-click="searchData.speciality = 'Paediatrics'; openSearch(); onsearchkeys();">
+        <small style="font-size: x-small">Pediatric</small>
+    </div>
+    <div class="col col-25 icontxt"><img ng-src="templates/res/plasticsurgery.png"
+                                                            style="width: 100%" ng-click="searchData.speciality = 'Plastic Surgery'; openSearch(); onsearchkeys();">
+        <small style="font-size: x-small">Plastic Surgery</small>
+    </div>
+    <div class="col col-25 icontxt"><img ng-src="templates/res/psychiatry.png"
+                                                            style="width: 100%" ng-click="searchData.speciality = 'Psychiatry'; openSearch(); onsearchkeys();">
+        <small style="font-size: x-small">Psychiatry</small>
+    </div>
+
+
+</div>
+            <div class="row">
+                <div class="col col-25 icontxt"><img ng-src="templates/res/pulmonology.png"
+                                                     style="width: 100%" ng-click="searchData.speciality = 'Pulmonology'; openSearch(); onsearchkeys();">
+                    <small style="font-size: x-small">Pulmonology</small>
+                </div>
+
+                <div class="col col-25 icontxt"><img ng-src="templates/res/rheumatology.png"
+                                                                        style="width: 100%" ng-click="searchData.speciality = 'Rheumatology'; openSearch(); onsearchkeys();">
+                    <small style="font-size: x-small">Rheumatology</small>
+                </div>
+                <div class="col col-25 icontxt"><img ng-src="templates/res/surgicalgastro.png"
+                                                                        style="width: 100%" ng-click="searchData.speciality = 'Gastroenterology (Surgical)'; openSearch(); onsearchkeys();">
+                    <small style="font-size: x-small">Surgical Gastroenterology</small>
+                </div>
+                <div class="col col-25 icontxt"><img ng-src="templates/res/urology.png"
+                                                     style="width: 100%" ng-click="searchData.speciality = 'Urology'; openSearch(); onsearchkeys();">
+                    <small style="font-size: x-small">Urology</small>
+                </div>
+
+
+</div>
+    <div class="row">
+        <div class="col col-25 icontxt" ng-click="searchData.speciality ='Women and Child'; openSearch(); onsearchkeys();" ><img ng-src="templates/res/womancare.png"
+                                                                                                                                 style="width: 100%" >
+            <small style="font-size: x-small">Woman & Child</small>
+        </div>
+        </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

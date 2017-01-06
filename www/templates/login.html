@@ -1,0 +1,42 @@
+<style type="text/css">
+    .nobbtm{border-bottom: 0 none !important;}
+    .nobdr{border:0 none !important}
+</style>
+<ion-modal-view>
+    <ion-header-bar style="background-color:#0097A7;">
+        <h1 class="title" style="color:#fff">Login</h1>
+
+        <div class="buttons">
+            <button style="color:#fff" class="button button-clear" ng-click="closeLogin()"><i class="ion-close-circled"></i></button>
+        </div>
+    </ion-header-bar>
+    <ion-content style="background-color: white">
+        <form >
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <span class="input-label">E-mail</span>
+                    <input type="text" ng-model="loginData.username" placeholder="Your Login Email" id="uname_input">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="loginData.password" placeholder="Password" id="pword_input">
+                </label>
+                <label class="item nobbtm">
+                    <button class="button button-block button-calm" type="submit" ng-click="doLogin()">Log in</button>
+                </label>
+                <label class="item" style="border-top: 0;padding-top: 0;">
+                <div style="width: 100%;text-align: center;">
+                <a ng-click="openforgotpassword()" style="text-decoration: underline;text-align:center;color:black"><label>Forgot Password ?</label></a>
+                </div>
+                </label>
+            </div>
+
+        </form>
+        <div class="list list-inset">
+            <h4 style="text-align: center;font-size: 14px;" class="title">Don't Have an Account ?</h4>
+            <label class="item nobdr">
+                <button class="button button-block button-calm" ng-click="openreg()">Register</button>
+            </label>
+        </div>
+    </ion-content>
+</ion-modal-view>

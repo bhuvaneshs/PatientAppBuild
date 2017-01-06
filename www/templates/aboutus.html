@@ -1,0 +1,240 @@
+<ion-nav-bar>
+    <ion-nav-back-button class="button-clear" go-native>
+        <i class="icon ion-android-arrow-back" style="color:#fff;"></i>
+    </ion-nav-back-button>
+</ion-nav-bar>
+<ion-view  view-title="About Continental" style="color:#fff">
+    <ion-content overflow-scroll="true"  ng-class="{'has-tabs-top': platform.isAndroid()}" class="has-header abtscreen">
+        <ion-list>
+            <div class="item item-body">
+                <img class="full-image abtlogo" src="templates/res/continental-logo.png">
+<div style="margin-top: 15px;margin-bottom: 15px;"><p style="margin-top: 0;font-family: helvetica,sans-serif;">Continental Hospitals is a part of the Parkway Pantai Ltd.Parkway Pantai is one of the region's largest integrated private healthcare groups with a
+    network of 22 hospitals and more than 4,000 beds throughout Asia,
+    including Singapore, Malaysia,Brunei, India, China and Vietnam.</p></div>
+            </div>
+            <ion-item class="item-stable" ng-click="toggleGroup(1)" ng-class="{active: isGroupShown(1)}">
+                <i class="icon" ng-class="isGroupShown(1) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+                &nbsp;
+                WHO WE ARE?
+
+            </ion-item>
+            <ion-item ng-show="isGroupShown(1)">
+                <div class="item item-body">
+                    <img class="full-image" src="templates/res/continental_new.png">
+                    <p style="text-align:justify;">
+                        Continental Hospitals is fully owned by IHH Healthcare Berhad, which is the second largest healthcare group in
+                        the world by market capitalisation and is dually listed on the Main Market
+                        of Bursa Malaysia and Main Board of SGX-ST.
+                        <br/>
+                        Continental Hospitals is a 750-bed super specialty hospital dedicated to excellence in medical services.
+                        We provide the highest quality patient-centric care. Ever since we first opened our doors in March 2013,
+                        we have been committed to defining new frontiers in healthcare by building an
+                        environment driven by interdisciplinary collaboration and innovative practice in the field of medicine.
+                        <br/>
+                        Continental’s carefully chosen team of experts, who are internationally-recognized healthcare professionals
+                        from over 30 specialties, is dedicated to providing top-notch patient care using world-class
+                        medical equipment and superior technology. In collaboration with our doctors is a
+                        proactive team of nurses and staff that helps Continental
+                        ensure that patients always receive the latest and most effective treatments in evidence-based medicine.
+                        <br/>
+                        Continental Hospitals has been accredited by Joint Commission International (JCI), USA - the highest body of accreditation in the world.
+                        Continental Hospitals is the first hospital in India, in the State of Telangana,
+                        and also the first multispecialty hospital (with Oncology) in the world to get the JCI accreditation in less than 2 years.
+                        It is also the first Hospital in the Indian subcontinent to obtain the “Gold Seal” in the first attempt.
+                        Continental Hospitals has also completed NABH Accreditation (highest accreditation in the country given to hospitals for quality care) in December 2014 (within less than 18 months).
+                        NABH accreditation is an important benchmark of quality and safety for patients.
+
+                        From providing accurate diagnoses to administering safe, time-tested medical treatment, Continental Hospitals pledges to deliver
+                        the highest standard of personalized care to its patients so that they can lead full, healthy and happy lives.
+                    </p>
+                </div>
+            </ion-item>
+            <ion-item class="item-stable" ng-click="toggleGroup(2)" ng-class="{active: isGroupShown(2)}">
+                <i class="icon" ng-class="isGroupShown(2) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+                &nbsp;
+                ABOUT PARKWAY PANTAI
+            </ion-item>
+            <ion-item ng-show="isGroupShown(2)" overflow-scroll="true">
+                <div class="item item-body">
+                    <img class="full-image" src="templates/res/Parkway-logo.png"style="height: 120px;width: 300px;">
+                    <p style="text-align:justify;">
+                        Parkway Pantai is one of the region's largest integrated private healthcare groups with a network
+                        of 22 hospitals and more than 4,000 beds throughout Asia, including Singapore, Malaysia, Brunei, India, China and Vietnam.
+                        It is fully owned by IHH Healthcare Berhad, which is the second largest healthcare group in the world by market
+                        capitalisation and is dually listed on the Main Market of Bursa Malaysia and Main Board of SGX-ST.
+                        In Singapore, Parkway Pantai is the largest private healthcare provider and operates Mount Elizabeth Novena Hospital,
+                        Mount Elizabeth Hospital, Gleneagles Hospital and Parkway East Hospital - all accredited by Joint Commission International (JCI).
+                        Over 1,400 specialist doctors are credentialed to admit patients to the four hospitals.
+                        In addition, Parkway Pantai has medical centres and clinics, health screening facilities, radiology facilities, laboratories, education facilities, rehabilitation services, a corporate insurance business and a third party administration business in Singapore which complement its hospital network.
+                        This broad range of services offered by Parkway Pantai's businesses provides it with an integrated presence across the primary, secondary, tertiary and quaternary healthcare sectors in Singapore. In Malaysia, Parkway Pantai is the second largest private healthcare provider with over 2,000 beds across a network of 13 multi-disciplinary hospitals under the "Pantai" and "Gleneagles" brands.
+                        Over 800 specialist doctors are credentialed to admit patients. Parkway Pantai also operates Pantai Premier Pathology, Pantai Integrated Rehab, one ambulatory care centre and one primary care centre in Malaysia. Internationally, Parkway Pantai owns and operates hospitals via joint venture agreements, or enters into consultancy agreements or HMAs to manage hospitals which are operational.
+                        In the primary care segment, through joint ventures, Parkway Pantai owns, manages and operates more than 10 medical centres and clinics in China and Hong Kong and one diagnostics centre in India.
+                        Parkway Pantai also operates more than 20 patient assistance centres across the globe, providing patients with seamless patient care and a one-stop referral source to its hospitals and services.
+                    </p>
+                </div>
+
+            </ion-item>
+            <ion-item class="item-stable" ng-click="toggleGroup(3)" ng-class="{active: isGroupShown(3)}">
+
+                <i class="icon" ng-class="isGroupShown(3) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+                &nbsp;
+                OUR MISSION,VISION AND VALUES
+            </ion-item>
+            <ion-item ng-show="isGroupShown(3)" overflow-scroll="true" style="padding:10px;">
+                <div class="item item-body">
+                    <h2 class="h2-title">Our Mission</h2>
+                    <h3 style="color:#0097a7">To make a difference in people’s lives through excellent patient care</h3>
+                    <p style="text-align:justify;">
+                        Our sights are set on establishing ourselves to be leaders in providing seamless, comprehensive healthcare of the highest quality, based on specific values, as well as to focus on creating and maintaining value for our people, patients, and shareholders.
+                    </p>
+                </div>
+                <div class="item item-body">
+                    <h2 class="h2-title">Our Vision</h2>
+                    <h3 style="color:#0097a7">The global leader in value-based integrated healthcare</h3>
+                    <p style="text-align:justify;">
+                        To utilize the best practices from across the world to provide the highest quality care to each patient in the most cost-effective manner.
+                        Continental Hospitals is committed to the benefit of humanity through dependable patient care, education and research.
+                    </p>
+                </div>
+                <div class="item item-body">
+                    <h2 class="h2-title">We Value</h2>
+                    <p style="text-align:justify">
+                    <h3 class="icon" ng-class="'ion-checkmark-circled'" style="color:#0097a7">&nbsp;People</h3>
+                    <p style="text-align:justify;"><span style="color:#0097a7">People</span> above all by treating those we serve and each other with compassion, dignity, integrity and mutual respect.</p>
+                    <h3 class="icon" ng-class="'ion-checkmark-circled'" style="color:#0097a7">&nbsp;Excellence</h3>
+                    <p style="text-align:justify;"><span style="color:#0097a7">Excellence</span> by striving for the finest clinical, service and operational outcomes.</p>
+                    <h3 class="icon" ng-class="'ion-checkmark-circled'" style="color:#0097a7">&nbsp;Results</h3>
+                    <p style="text-align:justify;"><span style="color:#0097a7">Results</span> by exceeding the expectations of the people we serve and those we set for ourselves.</p>
+                    </p>
+                </div>
+
+            </ion-item>
+            <ion-item class="item-stable" ng-click="toggleGroup(4)" ng-class="{active: isGroupShown(4)}">
+                <i class="icon" ng-class="isGroupShown(4) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+                &nbsp;
+                OUR BOARD AND MANAGEMENT
+            </ion-item>
+            <ion-item ng-show="isGroupShown(4)" overflow-scroll="true">
+                <div class="item item-body">
+                    <img class="full-image abtceo"  src="templates/res/TSL-with-jacket-2.png" >
+
+                    <h2 style="text-align: center">DR TAN SEE LENG</h2>
+                    <p style="text-align:justify;">
+                        Following Parkway Pantai’s acquisition of a 51% stake in Continental Hospitals, this 750-bed multi-specialty hospital has become part of a global healthcare network that owns some of the best names in healthcare including Mount Elizabeth, Gleneagles, Pantai and ParkwayHealth.
+                        Continental Hospitals has done well in terms of patient satisfaction, service quality and efficiency since it opened two years ago. The hospital has nurtured a strong culture of delivering high quality healthcare with warmth and empathy. These are attributes which we will further build on to ensure patients coming to Continental Hospitals continue to get the best care and clinical outcomes possible.
+                        As one of the largest integrated healthcare providers in the region, Parkway Pantai distinguishes ourselves through our excellent patient care and key focus on People, Excellence and Results.
+                        We treat our PEOPLE with compassion, dignity, integrity and mutual respect. We strive for the finest clinical, service and operational outcomes to achieve EXCELLENCE. Finally, our RESULTS exceed the expectations of the people we serve and the expectations we set for ourselves.
+                        With this partnership, we will share and leverage best practices and clinical expertise to look after all your healthcare needs. Working hand in hand with our dedicated team of healthcare professionals and other employees, we will continue to improve patient care and foster innovation that will give you the best results and patient experience at Continental Hospitals."
+
+                    <h3><p style="text-align:right">Dr Tan See Leng</p>
+                        <p style="text-align:right">Group Chief Executive Officer & Managing Director</p>
+                        <p style="text-align:right"> Parkway Pantai Ltd</p>
+                    </p>
+                    </h3>
+                    <!--<hr style="width:1500px;text-align: center">-->
+                    <img class="full-image abtceo" src="templates/res/Dr-Guru-N-Reddy.png">
+                    <h2 style="text-align: center">DR GURU N REDDY</h2>
+                    <p style="text-align:justify;">
+                        " We at Continental Hospitals have engaged the very best physicians and nurses from both the national and the international communities.
+                        Each member of our high-quality staff abides by our policy of putting patient care and patient dignity first.
+                        We are known for our integrity and our firm belief in practicing ethical, evidence-based medicine."
+
+
+                    <h3> <p style="text-align:right">Dr Guru N Reddy</p>
+                        <p style="text-align:right">Founder, Chairman and Managing Director</p>
+                        <p style="text-align:right">Continental Hospitals</p>
+                    </p>
+                    </h3>
+
+                    <!--Third Part-->
+                    <img class="full-image abtceo" src="templates/res/harish-manian.png">
+                    <h2 style="text-align: center">HARISH MANIAN</h2>
+                    <p style="text-align:justify">
+                        " By utilizing the best practices from across the world, continuously evaluating and improving all processes,
+                        we strive to constantly provide top quality care to every patient. We foster innovation, teamwork,
+                        personal responsibility and trust in every aspect and uphold patient dignity, safety and respect.
+                        Our partnership with Parkway Pantai is yet another step towards excellence.
+                        Continental Hospitals adherence to quality patient care and safety norms
+                        reconfirms its international quality standards for patient care and organizational management."
+
+
+                    <h3> <p style="text-align:right;">Harish Manian</p>
+                        <p style="text-align:right;">Chief Operating Officer</p>
+                        <p style="text-align:right">Continental Hospitals</p>
+                    </p>
+                    </h3>
+                    <div class="mid-stroke">
+                        <span class="mid-or-1" style=" border-radius:141px;width:299px;height:288px;border: 1px solid #006285;">BOARD MEMBERS</span>
+                    </div>
+
+                    <p style="text-align:center">DR.TAN SEE LENG</p>
+                    <p style="text-align:center">DR GURU N REDDY</p>
+                    <p style="text-align:center">MRS VASU REDDY</p>
+                    <p style="text-align:center">MR TAN SEE HAW</p>
+                    <p style="text-align:center">MR RAMESH KRISHNAN</p>
+                    <p style="text-align:center">MR OMKAR JOSHI</p>
+                    <p style="text-align:center">MS ELAINE LEONG</p>
+                    <p style="text-align:center">MR RAGHUNATH REDDY</p>
+
+                    <div class="mid-stroke">
+                        <span class="mid-or-1" style=" border-radius:141px;width:299px;height:288px;border: 1px solid #006285;">OUR MANAGEMENT</span>
+                    </div>
+
+                    <p style="text-align:center;font-size:18px;color:#006285;font-weight: 500;">HARISH MANIAN</p>
+                    <h4 style="text-align: center">Chief Operating Officer</h4>
+                    <p style="text-align:center;font-size:18px;color:#006285;font-weight: 500;">JOSEPHINE CYRIL</p>
+                    <h4 style="text-align: center">Director, Nursing</h4>
+                    <p style="text-align:center;font-size:18px;color:#006285;font-weight: 500;">MUKESH SINGH</p>
+                    <h4 style="text-align: center">Vice President, Finance</h4>
+                    <p style="text-align:center;font-size:18px;color:#006285;font-weight: 500;">ARCHANA DHIMAN</p>
+                    <h4 style="text-align: center">Head of Operations</h4>
+
+
+                </div>
+
+
+            </ion-item>
+            <ion-item class="item-stable" ng-click="toggleGroup(5)" ng-class="{active: isGroupShown(5)}">
+                <i class="icon" ng-class="isGroupShown(5) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+                &nbsp;
+                ACCREDITATION & HONORS
+            </ion-item>
+            <ion-item ng-show="isGroupShown(5)" overflow-scroll="true">
+                <div class="item item-body">
+                    <div class="mid-stroke">
+                        <span class="mid-or midsizing">ACCREDITATIONS</span>
+                    </div>
+                    <p style="text-align:left">
+                    <P style="text-align:left;" class="icon" ng-class="'ion-load-b'">&nbsp;Continental Hospitals has been accredited by JCI (Joint Commission International, USA) - the highest body of accreditation in the world.</P>
+                    <img class="full-image abtceo" src="templates/res/Gold-Seal.png">
+                    <P style="text-align:left;" class="icon" ng-class="'ion-load-b'">&nbsp;Continental Hospitals has also completed NABH Accreditation (highest accreditation in the country given to hospitals for quality care) in December 2014 (within less than 18 months).
+                        NABH accreditation is an important benchmark of quality and safety for patients.</P>
+                    </p>
+
+                    <img class="full-image abtceo" src="templates/res/NABH-Logo.png">
+
+                    <div class="mid-stroke">
+                        <span class="mid-or-1 midsizing">RECOGNITION</span>
+                    </div>
+                    <p style="text-align:left">
+                    <P style="text-align:left;" class="icon" ng-class="'ion-load-b'">&nbsp;Awarded with "The Best Multi Speciality Hospital of the year" Award at the prestigious Indo-Global Healthcare Summit -2014</P>
+                    <P style="text-align:left;" class="icon" ng-class="'ion-load-b'">&nbsp;Awarded with “Green Hospital of the Year” at the India Green Business Summit & Awards on 19th January, 2014, Delhi by the Knowledge Resource Development & Welfare Group</P>
+                    <P style="text-align:left;" class="icon" ng-class="'ion-load-b'">&nbsp;Received the “National Excellence in Healthcare Award” on 31st March 2014 from the National Education & Human Resource Development Organization – Mumbai</P>
+                    <P style="text-align:left;" class="icon" ng-class="'ion-load-b'">&nbsp;Continental Hospitals successfully completed FINAL phase of NABH accreditation process and received NABH accreditation successfully.</P>
+                    </p>
+
+                    <div class="mid-stroke">
+                        <span class="mid-or-2 midsizing">COMMENDATION</span>
+                    </div>
+                    <p style="text-align:justify">
+                    <P style="text-align:left;" class="icon" ng-class="'ion-load-b'">&nbsp;The hospital with efforts to reduce infections has achieved 0% Hospital Acquired Infection rate</P>
+                    <P style="text-align:left;" class="icon" ng-class="'ion-load-b'">&nbsp;Our patients have become the best ambassadors in creating awareness of our excellent services, physicians and nursing care</P>
+                    <P style="text-align:left;" class="icon" ng-class="'ion-load-b'">&nbsp;Collaborative efforts of doctors are being applauded by our patrons and reward us with new referrals continually. This fact is verified by the testimonials given to us by our esteemed patrons</P>
+                    </p>
+                </div>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>
+

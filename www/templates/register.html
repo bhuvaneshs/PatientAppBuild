@@ -1,0 +1,90 @@
+<style type="text/css">
+    .modal {
+        background-color: #eaeaea !important;
+    }
+
+    .bb {
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .placeholder-icon:first-child {
+        padding-right: 10px;
+    }
+
+    .btn {
+        padding-top: 5px;
+    }
+
+    label.item.has-error {
+        border-bottom: 2px solid red;
+    }
+
+    label.item.has-error-lr {
+        border-left: 2px solid red;
+        border-right: 2px solid red;
+    }
+
+    label.item.valid-lr {
+        border-left: 2px solid green;
+        border-right: 2px solid green;
+    }
+
+    .form-errors {
+        margin: 5px 0
+    }
+
+    .form-error {
+        padding: 2px 0 2px 16px;
+        color: red;
+    }
+    .disablebtn
+    {
+        background-color:#fdfafa;
+    }
+</style>
+
+<ion-modal-view>
+    <ion-header-bar style="background-color: #0097A7" class="bar-positive bar bar-header disable-user-behavior" align-title="center"
+                    style="background-color:rgb(56, 126, 245)">
+        <div class="title title-center header-item">Register</div>
+        <button class="button back-button buttons button-clear header-item" ng-click="closeReg()">
+            <i class="ion-close-circled"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content style="background-color: white">
+        <form ng-submit="" novalidate="" name="authorizationForm">
+            <div class="list list-inset" style="border: 1px solid #eae6e6;">
+                <label class="item-input bb">
+                    <i class="icon ion-ios-person placeholder-icon"></i>
+                    <input type="text" class="btn" name="firstName"  placeholder="Enter Full Name"
+                           ng-model="registerData.firstName" required>
+                </label>
+                <label class="item-input bb">
+                    <i class="icon ion-ios-telephone placeholder-icon"></i>
+                    <input type="tel" minlength="10" class="btn disablebtn" name="mobile" maxlength="10" placeholder="Enter Mobile Number"
+                           ng-model="registerData.mobile" required>
+                </label>
+                <label class="item-input bb">
+                    <i class="icon ion-email placeholder-icon"></i>
+                    <input type="email" class="btn" placeholder="Enter Valid Email Address" ng-model="registerData.email" required>
+                </label>
+                <label class="item-input bb">
+                    <i class="icon ion-locked placeholder-icon"></i>
+                    <input type="password" class="btn" placeholder="Enter Password" ng-model="pass1" required>
+                </label>
+                <label class="item-input bb">
+                    <i class="icon ion-locked placeholder-icon"></i>
+                    <input type="password" class="btn" placeholder="Re-enter Password" ng-model="registerData.password" required>
+                </label>
+                <label class="item-input" style="font-size: 13px;padding-left: 14px;padding-right: 0px;padding-top: 23px;">You'll receive
+                    an Email and SMS with OTP to verify your identity.</label>
+                <br/>
+                <label class="item" style="border-top: 0;border-left: 0;padding-top: 1px;">
+                    <button class="button button-block button-calm" ng-disabled="authorizationForm.$invalid" style="background-color:#006285;border-color:#006285" ng-click="doRegistration()">
+                        Continue
+                    </button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

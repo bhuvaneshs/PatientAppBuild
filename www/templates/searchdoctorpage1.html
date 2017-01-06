@@ -1,0 +1,44 @@
+<ion-modal-view>
+    <ion-header-bar class="stable-bg">
+        <div class="buttons padding-left">
+            <button class="button button-clear  button-positive" ng-click="closehomeSearch()"><i class="ion-close-circled" style="color:#fff"></i></button>
+        </div>
+        <h1 class="title">Search</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="list list-inset" scroll="false"  class="fade">
+
+
+            <label class="item item-input item-input-inset">
+                <input list="docnames" type="text" placeholder="Search Doctor" ng-change="ondocsearchpop()" ng-model="searchDoctor.name">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+            </label>
+            <datalist id="docnames">
+                <option ng-repeat="item in doctorsdetail track by $index" ng-click="setChange(item)"
+                        value="{{item.name}}" >
+                </option>
+            </datalist>
+            <button class="button button-block positive-bg" style="color: white;" ng-click="ondocsearchpopkeys()"><i class="icon ion-search padding-right"></i>Search</button>
+        </div>
+
+
+        <div class="item item-divider" ng-show="searchbuttonbool">
+            <div class=""><small style="font-size: x-small; font-style: italic">Search Results</small> <small style="font-size: x-small;">for</small><small style="white-space:nowrap;" >"{{searchDoctor.name}}"</small></div>
+
+        </div>
+        <div id="norecords" ng-show="nodoctors">
+            <div ng-include src="'templates/nodoctors.html'"></div>
+        </div>
+        <ion-list ng-model="docnames">
+
+            <ion-item ng-repeat="x in docnames track by x.name" class="animate-repeat" >
+                <div class="item item-image" style="width: 45px;height: 45px;float: left;margin-right: 15px;border-radius: 50%;">
+                    <img fallback-src="templates/res/nothumbicon.jpg" ng-src={{"http://54.169.42.241/PatientWebApi/api/Doctor/doctorThumbImage?did="+x.doctorId}}>
+                </div>
+                <a style="float: left;padding-top:10px;" id="{{x.doctorId}}" ng-hide="false"   ng-click="todetailDocpages('{{x.doctorId}}','{{x.specialistID}}')">Dr. {{x.name}}</a>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-modal-view>

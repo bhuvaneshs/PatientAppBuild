@@ -1,0 +1,281 @@
+/* Home Page css */
+body {
+    cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+.list .item.item-accordion {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+    line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+}
+
+.mid-stroke {
+    border-top: 1px solid #cdcdc5;
+    display: inline-block;
+    height: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    color: White;
+}
+
+.mid-or {
+    background-color:#0097a7;
+    padding: 0 15px;
+    position: relative;
+    top: -10px;
+    vertical-align: middle;
+    color: White;
+}
+.mid-or-1 {
+    background-color:#0097a7;
+    padding: 0 15px;
+    position: relative;
+    top: -10px;
+    vertical-align: middle;
+    color: White;
+}
+.mid-or-2 {
+    background-color:#0097a7;
+    padding: 0 15px;
+    position: relative;
+    top: -10px;
+    vertical-align: middle;
+    color: White;
+}
+.homelogo
+{
+    background-color: #ffffff;
+    width:100%;
+    padding-top: 13%;
+    padding-bottom: 15%;
+}
+.homelogo>div
+{
+    width: 95%;
+    padding-top: 15%;
+    margin: 0 auto;
+    padding-bottom: 15%;
+}
+.homenav
+{
+    background-color:#0097A7;
+    color:white;
+    padding:6%;
+}
+.homenav>a>h2
+{
+    color: white;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: roboto;
+    text-transform: none;
+    margin:0 auto;
+    text-align: center;
+}
+.homenav>a>h2>i {  color:white;  float:right; font-weight: 500; }
+.homenav>a { color:white;  text-decoration: none;  text-align: left; }
+.homenav>a>h2 { text-align: left;  color:white;  font-weight: 500;}
+/* End Of Home Page css */
+/* About Us */
+div.abtlogo {width: 344px;  height: 81px;  margin-left: -14px;  margin-bottom: 0px; }
+img.abtceo {  border-radius: 105px;  width: 200px;height: 200px;  margin: 0 auto;vertical-align: middle;margin-left: 17%;margin-right: 13%; }
+.midsizing { border-radius: 141px;width: 299px;height: 288px;padding:6px;font-weight: 500;font-size: 12px;  padding-left: 5%;padding-right: 5%;}
+/* End Of About Us */
+/* Search Doctor */
+.searchname
+{
+    margin: 0 auto;
+    width: 61%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.searchname p{
+    text-align: center;
+    font-weight: bolder;
+}
+.searchname p.dept
+{
+    overflow: visible;
+    float: right;
+    width: 100%;
+}
+.searchname>a>img
+{
+}
+.searchdoctr
+{
+    color:white;margin-top: 15%;border: 0 none;
+}
+.ion-close-circled
+{
+    color:#fff !important;
+}
+.list:last-child.card {
+    margin-bottom: 5px;
+}
+
+.PAST{
+    background-color: darkgray !important;
+}
+/*End Of Search Doctor*/
+.icontxt{
+    text-align: center;
+}
+.fixedcontent
+{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.contactbanner
+{
+    width:100%;
+}
+.contactbanner p
+{
+    background-color: #0097A7;
+    text-align: center;
+    color: white;
+    padding: 9px;
+    font-size: 15px;
+    font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+.hospitalbuilding
+{
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.contacttitle,.contactbody,.departmentbody
+{
+    text-align: center;
+}
+.contacttitle
+{
+    color:#006285;
+    font-weight:500;
+}
+.emergencyct,.emergencyct a
+{
+    color:red !important;
+}
+.departmentbody
+{
+    padding: 10px !important;
+}
+.departmentbody p
+{
+    margin: 0;
+}
+.departmentbody p>span,.contactbody p>span
+{
+    color:#006285;
+    font-weight:500;
+    font-size: 15px;
+}
+.contactbody a,.departmentbody p
+{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    text-align: left;
+}
+.departmentbody p a
+{
+    text-decoration: none;
+    color:black;
+}
+
+.list .item.item-accordion {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+    line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+}
+/*about Us */
+.imgbg
+{
+    transform: scale(1.1);
+    padding-bottom: 30px;
+}
+.bar-header
+{
+    background: #0097A7 !important;
+}
+[nav-bar-transition="android"] [nav-bar="active"] .bar, [nav-bar-transition="android"] [nav-bar="entering"] .bar
+{
+    background: #0097A7 !important;
+}
+
+div.calendar_grid >.row
+{
+    text-align: center !important;
+}
+.popup-container >.popup
+{
+    width:90%;
+}
+h2.h2-title
+{
+    font-family: Arial;
+    color:#0097a7 !important;
+    font-weight:bold;
+    margin-top: 0;
+}
+.colorwhite
+{
+    color:#fff !important;
+}
+h4.h2-titleserv {
+    font-size: 15px !important;
+    color: #0097a7 !important;
+}
+
+div.docdetprofile
+{
+    top:18%;
+}
+.maxqualify
+{
+    top:15% !important;
+}
+.servicetitlebgcolor
+{
+    background-color: #0097a7;
+    color: white !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    border-radius: 6px;
+}
+span.servicecontent
+{
+    padding-left:10px;
+}
+i.serviceico
+{
+    color: #0097a7 !important;
+    font-size: 17px !important;
+    margin-left: 3px !important;
+}
+div.depmgb0
+{
+    margin-bottom:0 !important;
+}

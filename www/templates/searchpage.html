@@ -1,0 +1,37 @@
+<style type="text/css">
+    .emergencycls
+    {
+float:left !important;
+    }
+
+</style>
+
+<ion-modal-view>
+    <ion-header-bar class="stable-bg">
+        <div class="buttons padding-left">
+            <button class="button button-clear  button-positive" ng-click="closeSearch()"><i class="ion-close-circled"></i></button>
+        </div>
+        <h1 class="title">Search</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="item item-divider" >
+            <div class=""><small style="font-size: x-small; font-style: italic">Search Results</small> <small style="font-size: x-small;">for</small><small style="white-space:nowrap;" >"{{searchData.speciality}}"</small></div>
+
+        </div>
+        <div id="norecords" ng-show="nolists">
+            <div ng-include src="'templates/nodoctors.html'"></div>
+        </div>
+            <ion-list ng-model="names">
+                <ion-item ng-repeat="x in names track by x.name" class="animate-repeat">
+                    <div class="item item-image" style="width: 45px;height: 45px;float: left;margin-right: 15px;border-radius: 50%;">
+                        <img class="imgbg" fallback-src="templates/res/nothumbicon.jpg" ng-src={{"http://54.169.42.241/PatientWebApi/api/Doctor/doctorThumbImage?did="+x.doctorId}}>
+                    </div>
+                    <a style="float: left;padding-top:10px;" id="{{x.doctorId}}" ng-hide="false"   ng-click="todetailpages('{{x.doctorId}}','{{x.specialistID}}')">Dr. {{x.name}}</a>
+                </ion-item>
+            </ion-list>
+
+
+    </ion-content>
+
+</ion-modal-view>

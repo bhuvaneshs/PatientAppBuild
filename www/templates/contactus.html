@@ -1,0 +1,175 @@
+<ion-view  view-title="Contact Us">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon button-clear padding-right" ng-click="popover.show($event)" go-native>
+            <i style="font-size: x-large; margin-right: 20px;" ng-class="{'ion-android-more-vertical': platform.isAndroid(), 'ion-ios-cog-outline':platform.isIOS()}" class="padding-right"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content ng-class="{'has-tabs-top': platform.isAndroid()}" class="has-header ctus">
+<div class="hospitalbuilding">
+    <img src="templates/res/contact.png"/>
+</div>
+<div class="contactbanner">
+            <p>Contact Numbers</p>
+</div>
+        <div class="row">
+            <div class="col">
+             <div class="contacttitle">
+                <label>Main Hospital</label>
+            </div>
+                <div class="contactbody">
+                    <a ng-href="tel:{{+914067000000}}" >+91 40 6700 0000</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="contacttitle emergencyct">
+                    <label>Emergency</label>
+                </div>
+                <div class="contactbody emergencyct">
+                    <a ng-href="tel:{{+914067000111}}" >+91 40 6700 0111</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="contacttitle">
+                    <label>General Information</label>
+                </div>
+                <div class="contactbody">
+                    <a ng-href="tel:{{+914067000000}}" >+91 40 6700 0000</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="contacttitle">
+                    <label>Health Check</label>
+                </div>
+                <div class="contactbody">
+                    <a ng-href="tel:{{+914067000011}}" >+ 91 40 6700 0011</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="contacttitle">
+                    <label>Out Patient Department(OPD)</label>
+                </div>
+                <div class="contactbody">
+                    <a ng-href="tel:{{+914067000022}}" >+91 40 6700 0022</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="contacttitle">
+                    <label>Radiology & Nuclear Medicine</label>
+                </div>
+                <div class="contactbody">
+                    <a ng-href="tel:{{+914067000333}}" >+91 40 6700 0333</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="contacttitle">
+                    <label>Pharmacy</label>
+                </div>
+                <div class="contactbody">
+                    <a ng-href="tel:{{+914067000444}}" >+91 40 6700 0444</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="contacttitle">
+                    <label>Billing & Insurance</label>
+                </div>
+                <div class="contactbody">
+                    <a ng-href="tel:{{+914067000123}}" >+91 40 6700 0123</a>
+                </div>
+            </div>
+        </div>
+        <span style="margin-top:5px"></span>
+        <div class="row">
+            <div class="col">
+            <div class="contacttitle">
+            <i style="color:#2AB200" class="ion-social-whatsapp"></i>&nbsp;<label>Whatsapp</label>
+            </div>
+            <div class="contactbody">
+                <a ng-href="tel:{{+917799360360}}" >+91 7799 360 360 </a>
+            </div>
+            </div>
+        </div>
+        <div class="contactbanner">
+            <p>Hospital Address</p>
+        </div>
+        <div class="row responsive-sm">
+            <div class="col depmgb0">
+
+                <div class="contactbody">
+                    <p> <span>Continental Hospitals</span><br/>
+                        Plot No.3, Road No.2<br/>
+                        IT & Financial Dist, Nanakramguda<br/>
+                        Gachibowli, Hyderabad - 500032<br/>
+                        Tel: +91 40 67000000.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contactbanner">
+            <p>Departmental Email ID's</p>
+        </div>
+        <div class="row responsive-sm">
+            <div class="col depmgb0">
+                <div class="contacttitle"><i class="ion-waterdrop" style="color:red"></i>&nbsp;<span style="color:red">Blood Bank</span></div>
+                <div class="contactbody">
+                    <a style="color:red"href="mailto:bloodbank@continentalhospitals.com">bloodbank@continentalhospitals.com</a>
+                </div>
+                </div>
+            <div class="col depmgb0">
+                <div class="contacttitle"><i class="ion-briefcase" style="color:#0097a7;"></i>&nbsp;Career Center</div>
+                <div class="contactbody">
+                <a href="mailto:careers@continentalhospitals.com">careers@continentalhospitals.com</a>
+                </div>
+                </div>
+            <div class="col depmgb0">
+                <div class="contacttitle"><i class="ion-medkit" style="color:#0097a7;"></i>&nbsp;Doctors</div>
+                <div class="contactbody">
+                <a href="mailto:doctors@continentalhospitals.com">doctors@continentalhospitals.com</a>
+                </div>
+            </div>
+            <div class="col depmgb0">
+                <div class="contacttitle"><i class="ion-erlenmeyer-flask" style="color:#0097a7;"></i>&nbsp;Lab</div>
+                <div class="contactbody">
+                    <a href="mailto:lab@continentalhospitals.com">lab@continentalhospitals.com</a>
+</div>
+            </div>
+            <div class="col depmgb0">
+                <div class="contacttitle"><i class="ion-person-stalker" style="color:#0097a7;"></i>&nbsp;OPD</div>
+                <div class="contactbody">
+                    <a href="mailto:opd@continentalhospitals.com">opd@continentalhospitals.com</a>
+</div>
+            </div>
+            <div class="col depmgb0">
+                <div class="contacttitle"><i class="ion-clipboard" style="color:#0097a7;"></i>&nbsp;Operations</div>
+                <div class="contactbody">
+                <a href="mailto:operations@continentalhospitals.com">operations@continentalhospitals.com</a>
+</div>
+            </div>
+            <div class="col depmgb0">
+                <div class="contacttitle"><i class="ion-ios-home" style="color:#0097a7;"></i>&nbsp;Pharmacy</div>
+                <div class="contactbody">
+                    <a href="mailto:pharmacy@continentalhospitals.com">pharmacy@continentalhospitals.com</a>
+</div>
+            </div>
+            <div class="col depmgb0">
+                <div class="contacttitle"><i class="ion-images" style="color:#0097a7;"></i>&nbsp;Radiology
+                    <div class="contactbody">
+                    <a href="mailto:radiology@continentalhospitals.com">radiology@continentalhospitals.com</a>
+                        </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="contactbanner">
+            <p>Virtual Tour</p>
+        </div>
+            <div style="width: 70%;min-width: 70%;text-align: center;margin: 0 auto;vertical-align: middle;margin-top: 0%;max-width: 100%;margin-bottom: 20px;">
+              <a href="https://www.youtube.com/watch?v=12xdBQLNZtE&feature=youtu.be" target="_blank"><img src="templates/res/watchusyoutube.png" alt="youtube"/></a>
+            </div>
+    </ion-content>
+    </ion-view>
+

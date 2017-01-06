@@ -1,0 +1,138 @@
+<style type="text/css">
+    p span {
+        display:block;
+    }
+    .profile-details{
+        margin: 0px;
+    }
+    .profile-details>.item-image{
+        background-color: black;
+    }
+    .profile-details>.item-image>img{
+        opacity: 0.7;
+    }
+    .profile-details>.item-avatar{
+        position: absolute;
+        z-index: 3;
+       /* top: 10vh; */
+        width: 100%;
+        background-color:initial;
+        border:none;
+    }
+    .profile-details>.item-button{
+        padding: 5px;
+    }
+    .profile-details>.item-button>button{
+        margin: 0px;
+        font-size: 17px;
+        line-height: 30px;
+        font-weight: 500;
+        min-height: 25px;
+    }
+    .profile-details>.item-icon-left>.icon{
+
+        font-size: 16px;
+    }
+    .profile-details>.item>p {
+        font-size: 12px;
+        overflow: auto;
+        text-overflow: initial;
+        white-space: normal;
+    }
+    .bar .title.title-left {
+        text-align: left;
+        margin-left: 37px !important;
+        left: 0 !important;
+    }
+    .bar .back-button.hide, .bar .buttons .hide
+    {
+        display:block !important;
+    }
+    .doctorprofiles,.ion-android-arrow-back
+    {
+        color:#fff;
+    }
+</style>
+
+<ion-view view-title="Doctor Details" cache-view="false" class="doctorprofiles">
+    <ion-nav-bar ng-controller="doctordetailspageCtrl">
+        <ion-nav-back-button class="button-clear" ng-click="mydoctorGoBack()">
+            <i class="icon ion-android-arrow-back" ></i>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="secondary">
+            <button class="button button-icon button-clear padding-right" ng-click="popover.show($event)" go-native>
+                <i style="font-size: x-large; margin-right: 20px;color:#fff;" ng-class="{'ion-android-more-vertical': platform.isAndroid(), 'ion-ios-cog-outline':platform.isIOS()}" class="padding-right"></i>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-content ng-class="{'has-tabs-top': platform.isAndroid()}" class="has-header">
+        <ion-refresher pulling-text="Refresh"
+                       refreshing-text="Loading..."
+                       refreshing-icon="ion-load-d"
+                       pulling-icon="ion-ios-arrow-thin-down"
+                       on-refresh="dodRefresh()">
+        </ion-refresher>
+        <div class="animate-repeat">
+            <div class="list card profile-details">
+
+
+                <div class="item item-avatar docdetprofile" ng-class="{'maxqualify': doctorProfileDtl.doctorId == 101}">
+                    <img style="width:40px;height:40px;" fallback-src="templates/res/nothumbicon.jpg" ng-src="{{doctorThumbDp}}">
+                    <h2 class="stable" style="white-space: pre-line">Dr. {{doctorProfileDtl.name}}</h2>
+                    <h3  class="stable item-text-wrap" style="white-space: pre-line;">{{doctorProfileDtl.qualification}}</h3>
+                    <h3  class="stable" style="white-space: pre-line">{{doctorProfileDtl.speciality}}</h3>
+                </div>
+
+                <div class="item item-image" style="height: 250px;">
+                    <img fallback-src="templates/res/noicon.jpg" ng-src="{{doctorDp}}">
+                </div>
+                <div class="item item-button">
+                    <button class="button button-full button-positive"ng-click="appointmentFixing('{{doctorProfileDtl.doctorId}}')">
+                      Book Appointment
+                    </button>
+                </div>
+                <div class="item">
+                    <h2>CONSULTATION FEE</h2>
+                    <p>&#8377; &nbsp;{{doctorProfileDtl.fees}}</p>
+                </div>
+
+
+                <div class="item item-divider item-icon-left">
+                    <i class="icon ion-android-pin"></i>
+                    ADDRESS
+                </div>
+                <div class="item" style="padding: 0px;">
+                    <img ng-click="MapLocation()" style="width:100%" src="https://maps.googleapis.com/maps/api/staticmap?size=1024x150&zoom=16&markers=color:red%7Clabel:S%7C{{clinicLatlng}}&key=AIzaSyBXUs9tg6EwnCFCEJUP2TjqxzrIqxKYFY0">
+                </div>
+                <div class="item">
+                    Plot No. 3, Road No. 2, IT & Financial District, Nanakramguda, Gachibowli, Hyderabad, Telangana 500035
+                    <p>
+                        {{resultstoreList.area}}</p>
+                    <h3>Continental Hospitals</h3>
+                    <p>Plot No. 3, Road No. 2, IT & Financial District, Nanakramguda, Gachibowli, Hyderabad, Telangana 500035</p>
+                    <p>India.</p>
+
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left pull-right"style="color: #b2b2b2;">
+                    <h2 style="padding-top: 13px;margin-left: 16px;">Ratings</h2>
+                    <a class="tab-item" href="#">
+
+                        <i class="icon ion-thumbsup iconcolor" style="color:#0097A7"><small style="font-size: x-small;color:#006285"></small></i>
+                    </a>
+                    <a class="tab-item" href="#" >
+                        <i class="icon ion-thumbsdown" ><small style="font-size: x-small"></small></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <br/>
+        <br/>
+
+    </ion-content>
+
+
+</ion-view>

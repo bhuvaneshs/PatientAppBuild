@@ -1,0 +1,40 @@
+<ion-view cache-view="true" view-title="Continental Hospitals">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon button-clear padding-right" ng-click="popover.show($event)" go-native>
+            <i style="font-size: x-large; margin-right: 20px;" ng-class="{'ion-android-more-vertical': platform.isAndroid(), 'ion-ios-cog-outline':platform.isIOS()}" class="padding-right"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content ng-class="{'has-tabs-top': platform.isAndroid()}" class="has-header" content scroll="false">
+        <div class="homecontent">
+        <div class="homelogo">
+            <div>
+             <img class="full-image abtlogo" src="templates/res/continental-logo.png">
+            </div>
+        </div>
+        <ion-list class="fixedcontent">
+           <ion-item class="homenav">
+               <a href="#/app/aboutus">
+               <h2>About Continental<i class="ion-ios-arrow-forward"></i>
+               </h2>
+               </a>
+           </ion-item>
+            <ion-item class="homenav">
+                <a href="#/app/doctorsearch">
+                <h2>Search A Doctor<i class="ion-ios-arrow-forward"></i></h2>
+                </a>
+            </ion-item>
+            <ion-item class="homenav">
+                <a href="#/app/services">
+                <h2>Services Available<i class="ion-ios-arrow-forward"></i></h2>
+                </a>
+            </ion-item>
+            <ion-item class="homenav">
+                <a href="#/app/contactus">
+                    <h2>How To Reach Us?<i class="ion-ios-arrow-forward"></i></h2>
+                </a>
+            </ion-item>
+        </ion-list>
+        </div>
+    </ion-content>
+</ion-view>
+

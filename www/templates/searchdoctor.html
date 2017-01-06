@@ -1,0 +1,28 @@
+
+<ion-view view-title="Search Doctor">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon button-clear padding-right">
+            <i style="font-size: x-large; margin-right: 20px;" ng-class="{'ion-android-more-vertical': platform.isAndroid(), 'ion-ios-cog-outline':platform.isIOS()}" class="padding-right"></i>
+        </button>
+    </ion-nav-buttons>
+<ion-content ng-class="{'has-tabs-top': platform.isAndroid()}" class="has-header" content scroll="false">
+<ion-list>
+<ion-item class="searchdoctr">
+<div class="searchname">
+<a ng-click="openhomeSearch()">
+<img width="135" height="135" src="templates/res/searchname.png" alt="search by name"/>
+<p>Search By Doctor</p>
+</a>
+</div>
+<br/><br/>
+<div class="searchname">
+<a ng-click="searchdepartment()">
+<img width="135" height="135" src="templates/res/searchbydept.png" alt="search by doctor department"/>
+<p class="dept">Search By Department</p>
+                    </a>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+

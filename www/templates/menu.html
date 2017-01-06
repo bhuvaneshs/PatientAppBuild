@@ -1,0 +1,27 @@
+  <ion-side-menus >
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent">
+      <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+        <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/app/home">
+          <ion-nav-view name="Home"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Doctor" icon-off="ion-ios-people-outline" data-transition-native-androiddelay="200" icon-on="ion-ios-people" href="#/app/search">
+          <ion-nav-view name="Doctor Search"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Profile" icon-off="ion-ios-person-outline" icon-on="ion-ios-person" href="#/app/profile">
+          <ion-nav-view name="Profile"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Appointments" icon-off="ion-ios-calendar-outline" icon-on="ion-ios-calendar" href="#/app/myappointments">
+          <ion-nav-view name="Appointments"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Contact Us" icon-off="ion-ios-telephone-outline" icon-on="ion-ios-telephone" href="#/app/contactus">
+          <ion-nav-view name="Contact"></ion-nav-view>
+        </ion-tab>
+      </ion-tabs>
+    </ion-nav-view>
+  </ion-side-menu-content>
+</ion-side-menus>

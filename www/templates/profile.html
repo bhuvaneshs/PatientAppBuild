@@ -1,0 +1,162 @@
+<style type="text/css">
+    .list .item.item-accordion {
+        line-height: 38px;
+        padding-top: 0;
+        padding-bottom: 0;
+        transition: 0.09s all linear;
+    }
+
+    .list .item.item-accordion.ng-hide {
+        line-height: 0px;
+    }
+
+    .list .item.item-accordion.ng-hide-add,
+    .list .item.item-accordion.ng-hide-remove {
+        display: block !important;
+    }
+
+    .profile-details {
+        margin: 0px;
+    }
+
+    .profile-details > .item-image {
+        background-color: black;
+    }
+
+    .profile-details > .item-image > img {
+        opacity: 0.7;
+    }
+
+    .profile-details > .item-avatar {
+        position: absolute;
+        z-index: 3;
+        top: 31vh;
+        width: 100%;
+        background-color: initial;
+        border: none;
+    }
+.nobrdr
+{
+   border-color:#006285;
+}
+</style>
+
+
+<ion-view cache-view="false" view-title="Profile" style="color:white;">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon button-clear padding-right" ng-click="popover.show($event)" go-native>
+            <i style="font-size: x-large; margin-right: 20px;" ng-class="{'ion-android-more-vertical': platform.isAndroid(), 'ion-ios-cog-outline':platform.isIOS()}" class="padding-right"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content ng-class="{'has-tabs-top': platform.isAndroid()}" class="has-header">
+        <ion-refresher pulling-text="Refresh"
+                       refreshing-text="Loading..."
+                       refreshing-icon="ion-load-d"
+                       pulling-icon="ion-ios-arrow-thin-down"
+                       on-refresh="doproRefresh()">
+        </ion-refresher>
+        <div class="list list-inset" ng-hide="check_pid();">
+            <div class="row">
+                <div class="col">
+                    <button class="button button-block button-balanced" ng-click="openLogin()">
+                        <i class="ion-person"> </i>&nbsp;
+                        Login to your account
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="list card profile-details list-inset" ng-show="check_pid();">
+
+            <div class="item item-avatar">
+
+                <img fallback-src="templates/res/nothumbicon.jpg" src="{{user_dp}}" ng-click="dp_openModal()">
+
+            </div>
+
+            <div class="item item-image">
+                <div style="background-image: url({{user_dp}}); height: 37vh;background-size: cover;background-position: center;opacity: 0.5;"></div>
+            </div>
+
+            <div class="item item-icon-left">
+                <h2>{{profileDetails.fname}}&nbsp;{{profileDetails.lname}}</h2>
+                <h4>{{profileDetails.email}}</h4>
+            </div>
+
+
+            <div class="item tabs tabs-secondary tabs-icon-left pull-right" style="color: #b2b2b2;">
+
+                <a class="tab-item" href="#" ng-click="profilePic()">
+                    <i class="icon ion-ios-camera"></i>Profile Picture
+                </a>
+                <a class="tab-item" href="#" ng-click="logout_patient()">
+                    <i class="icon ion-lock-combination"></i>Logout
+                </a>
+
+            </div>
+        </div>
+
+
+        <form name="regForm" ng-show="check_pid();">
+
+            <div class="list list-inset profile-details">
+
+
+                <label class="item item-input">
+                    <span class="input-label filter-date-span">Name</span>
+                    <input name="firstname" type="text" ng-model='profileDetails.fname'>
+                </label>
+
+                <label class="item item-input">
+                    <i ng-show="regForm.email.$invalid && !regForm.email.$pristine"
+                       class="ion-android-warning assertive padding-right"></i>
+                    <span class="input-label filter-date-span"
+                          ng-class="{ 'assertive' : regForm.email.$invalid && !regForm.email.$pristine }">Email</span>
+                    <input name="email" type="email" ng-model='profileDetails.email' readonly style="background-color:#fff">
+                </label>
+
+                <label class="item item-input">
+                    <span class="input-label filter-date-span"
+                          ng-class="{ 'assertive' : regForm.mobile.$invalid && !regForm.mobile.$pristine }">Mobile</span>
+
+                    <input name="mobile" type="tel" maxlength="10" minlength="10" ng-model='profileDetails.mobile'
+                         readonly style="background-color:#fff">
+                </label>
+
+                <label class="item item-input">
+                    <span class="input-label filter-date-span">Date Of Birth</span>
+                    <ionic-datepicker input-obj="datepickerObjectdob">
+                    <input name="dob" type="text" placeholder="Select Date of Birth" readonly style="background-color:#fff"  ng-model='profileDetails.dob'>
+                        </ionic-datepicker>
+                </label>
+
+                <label class="item item-input">
+                    <span class="input-label filter-date-span">Country</span>
+                    <input name="country" type="text" ng-model='profileDetails.countryName'>
+                </label>
+
+                <label class="item item-input">
+                    <span class="input-label filter-date-span">State</span>
+                    <input name="state" type="text" ng-model='profileDetails.stateName'>
+                </label>
+
+                <label class="item item-input">
+                    <span class="input-label filter-date-span">City</span>
+                    <input name="city" type="text" ng-model='profileDetails.cityName'>
+                </label>
+            </div>
+
+
+
+            <div class="list list-inset" style="border: 0 none;padding: 0;">
+                <label class="item" style="border: 0 none;padding-bottom: 2px;">
+                    <button class="button button-block button-calm nobrdr"  ng-click="Profile_edit()">Edit Profile</button>
+                </label>
+<label class="item" style="border:0 none;padding-top: 0;">
+    <button class="button button-block button-positive"  ng-click="changepwd()">Change Password</button>
+</label>
+            </div>
+
+        </form>
+    </ion-content>
+</ion-view>

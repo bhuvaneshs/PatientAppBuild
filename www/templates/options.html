@@ -1,0 +1,31 @@
+<style type="text/css">
+    .popoverstyle {
+        top: 39px;
+        left: 134px;
+        margin-left: 0px;
+        opacity: 1;
+        max-height: 150px !important;
+        overflow: hidden;
+        background-color: white;
+        min-height:24% ;
+    }
+</style>
+
+<ion-popover-view class="popoverstyle">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-click=""  style="height: 50px !important;">
+                Rate this app
+            </ion-item>
+            <ion-item ng-click="socialShare()"  style="height: 50px !important;">
+                Share
+            </ion-item>
+            <ion-item ng-show="popoverState" ng-click="logout_patient()">
+                Logout
+            </ion-item>
+            <ion-item ng-show="!popoverState" ng-click="openLogin()">
+                Login
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-popover-view>

@@ -1,0 +1,93 @@
+<style type="text/css">
+
+    .like
+    {
+        color: #006285;
+        pointer-events: none;
+        cursor: none;
+    }
+    .dislike
+    {
+        color:#006285;
+        pointer-events: none;
+        cursor: none;
+    }
+    .tabslikedislike {
+        height: 41px !important;
+        border-width: 0 !important;
+    }
+</style>
+
+
+<ion-view cache-view="false" view-title="My Appointments">
+
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon button-clear padding-right" ng-click="popover.show($event)">
+            <i style="font-size: x-large; margin-right: 20px;" ng-class="{'ion-android-more-vertical': platform.isAndroid(), 'ion-ios-cog-outline':platform.isIOS()}" class="padding-right"></i>
+        </button>
+    </ion-nav-buttons>
+
+
+    <ion-content ng-class="{'has-tabs-top': platform.isAndroid()}" class="has-header">
+        <ion-refresher pulling-text="Refresh"
+                       refreshing-text="Loading..."
+                       refreshing-icon="ion-load-d"
+                       pulling-icon="ion-ios7-arrow-thin-down"
+                       on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="list list-inset" style="
+    margin-top: 2px;
+    margin-bottom: 2px;
+">
+            <label class="item item-input" ng-hide="appoints_list" style="display:none;">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search my appointments">
+            </label>
+        </div>
+
+        <div id="appoints_list" ng-show="appoints_list">
+            <div ng-include src="'templates/norecords.html'"></div>
+        </div>
+
+        <div ng-repeat="x in appointmentslist track by $index"  class="animate-repeat">
+            <div class="list card" disabled="true" ng-repeat-end="">
+                <div class="item item-avatar">
+                <img style="max-width: 45px;max-height: 45px;" fallback-src="templates/res/nothumbicon.jpg" ng-src={{"http://54.169.42.241/PatientWebApi/api/Doctor/doctorThumbImage?did="+x.doctorId}} alt="{{x.speciality}}">
+
+                    <h5>Dr.{{x.name}}</h5>
+
+                    <div>
+                        <small style="font-size: x-small">Appointment Date : {{x.stringdate}}</small>
+                        <br/>
+                        <small style="font-size: x-small"> Appointment Time : {{x.stringtime}}</small>
+
+                    </div>
+                </div>
+                <div class="item item-image"></div>
+
+                <div style="color: #b2b2b2;" class="item tabs tabs-secondary tabs-icon-left pull-right tabslikedislike">
+                    <a class="tab-item" href="#" ng-click="onthumbsup('{{x.doctorId}}','{{x.name}}','{{x.appointmentId}}');">
+
+                        <i class="icon ion-thumbsup" ng-class="{like:x.likeflag==1}">
+                        </i>
+                    </a>
+                    <a class="tab-item" href="#" ng-click="onthumbsdown('{{x.doctorId}}','{{x.name}}','{{x.appointmentId}}')">
+                        <i class="icon ion-thumbsdown" ng-class="{dislike:x.dislikeflag==1}">
+                        </i>
+                    </a>
+                    <a class="tab-item" href="#" ng-show="checkstatus('{{x.status}}');"
+                       ng-click="cancelapp('{{x.appointmentId}}','{{x.name}}','{{x.stringdate}}','{{x.stringtime}}','{{x.speciality}}')">
+                        <i class="icon ion-android-delete"></i>
+                        Cancel
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+    </ion-content>
+</ion-view>
